@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caluculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script scr="script.js" defer></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="calculator">
+        <div id="screen"></div>
+        <div id="row_one_div" class="row">
+            <button id="left_parenthesis" class="button" onclick="printToScreen('(')">(</button>
+            <button id="right_parenthesis" class="button" onclick="printToScreen(')')">)</button>
+            <button id="divide" class="button" onclick="printToScreen('/')">/</button>
+            <button id="multiply" class="button" onclick="printToScreen('*')">*</button>
+        </div>
+        <div id="row_two" class="row">
+            <button id="seven" class="button" onclick="printToScreen('7')">7</button>
+            <button id="eight" class="button" onclick="printToScreen('8')">8</button>
+            <button id="nine" class="button" onclick="printToScreen('9')">9</button>
+            <button id="subtract" class="button" onclick="printToScreen('-')">-</button>
+        </div>
+        <div id="row_three" class="row">
+            <button id="four" class="button" onclick="printToScreen('4')">4</button>
+            <button id="five" class="button" onclick="printToScreen('5')">5</button>
+            <button id="six" class="button" onclick="printToScreen('6')">6</button>
+            <button id="add" class="button" onclick="printToScreen('+')">+</button>
+        </div>
+        <div id="row_four" class="row">
+            <button id="one" class="button" onclick="printToScreen('1')">1</button>
+            <button id="two" class="button" onclick="printToScreen('2')">2</button>
+            <button id="three" class="button" onclick="printToScreen('3')">3</button>
+            <button id="clear" class="button" onclick="clearScreen()">clear</button>
+        </div>
+        <div id="row_five" class="row">
+            <button id="zero" class="button" onclick="printToScreen('0')">0</button>
+            <button id="period" class="button" onclick="printToScreen('.')">.</button>
+            <button id="enter" class="button">enter</button>
+        </div>
+    </div>
+    <script>
+        function printToScreen(temp) {
+            const screen = document.getElementById("screen")
+            screen.innerHTML += temp;
+        }
+
+        function clearScreen() {
+            const screen = document.getElementById("screen")
+            screen.innerHTML = "";
+        }
+    </script>
+</body>
+</html>
